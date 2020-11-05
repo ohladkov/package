@@ -1,12 +1,26 @@
 {
-  "name": "package",
+  "name": "search-package",
   "version": "0.1.0",
-  "private": true,
+  "description": "Describes search component",
+  "author": {
+    "name": "Oleh",
+    "email": "oleh.hladkov@gmail.com"
+  },
+  "repository": "https://github.com/ohladkov/package",
+  "bugs": "https://github.com/ohladkov/package/issues",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:npm": "vue-cli-service build --target lib --name searchPackage src/SearchPackage.vue"
   },
+  "main": "dist/searchPackage.umd.js",
+  "unpkg": "dist/searchPackage.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
